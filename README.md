@@ -28,8 +28,7 @@ Here is a breakdown of the key technologies implemented in this topology:
 *   **VLAN & Inter-VLAN Routing:** The network is segmented into multiple VLANs (e.g., VLAN 10, 11, 12, 13, 14, 15, 16) to separate traffic logically. To allow these VLANs to communicate with each other and reach the outside network, Inter-VLAN routing (Router-on-a-Stick method) is configured on the router sub-interfaces.
 *   **Voice VLAN & IP Phone:** Voice VLANs are implemented specifically for the Cisco 7960 IP Phones. The network utilizes Cisco's Call Manager Express (CME) or Telephony Service on the routers to assign Directory Numbers (DN) to the IP phones, enabling VoIP calls across the network.
 *   **DHCP Server:** The DHCP server is configured (either centrally on a Server-PT or distributed on the routers) to automatically assign IP addresses, subnet masks, default gateways, and DNS server addresses to end devices like PCs, Laptops, and Smartphones.
-*   **DNS & Web Server:** A central Server-PT is configured as a Web Server and a DNS Server. End devices use the DNS server (configured via DHCP with IP `202.22.23.10`) to resolve the domain name `tkj.com` to access the web server's page.
-
+*   **DNS & Web Server:** A central Server-PT is configured as a Web Server and a DNS Server. End devices use the DNS server
 ---
 
 ## 🎯 Task Achievements & Documentation
@@ -37,8 +36,6 @@ Below is the documentation of the testing results based on the task requirements
 
 ### 1. 🖧 Routing Tables Across All Routers
 Verification of the routing tables using the `show ip route` command on RouterA, RouterB, RouterC, and RouterD to ensure the **RIP** protocol has successfully advertised all network segments.
-> **Configuration Evidence:**
-> * *(Insert Screenshot of Routing Tables here)*
 
 ### 2. ⚡ Client Connectivity Test Between Routers
 ICMP Ping testing between End Devices (PCs, Laptops, Smartphones, and Printers) located in different network segments to ensure seamless routing without Request Time Out (RTO).
